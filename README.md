@@ -14,6 +14,7 @@
 <ol>
   <li>In side visual studio, open Package Manager Console and input the following line to download Google Authentication middleware Nuget package</li>
 </ol>
+
 ```NuGet\Install-Package Microsoft.AspNetCore.Authentication.Google -Version 7.0.9```
 
 <ol start="2">
