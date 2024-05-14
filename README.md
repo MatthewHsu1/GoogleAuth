@@ -15,14 +15,17 @@
   <li>In side visual studio, open Package Manager Console and input the following line to download Google Authentication middleware Nuget package</li>
 </ol>
 
-  ```NuGet\Install-Package Microsoft.AspNetCore.Authentication.Google -Version 7.0.9```
+```
+  NuGet\Install-Package Microsoft.AspNetCore.Authentication.Google -Version 7.0.9
+```
 
 <ol start="2">
   <li>Right-click the project, select Manage User Secrets, and type the following code.</li>
 </ol>
 
-  ```{  "Authentication:Google:ClientId": "your Google client ID",
-   "Authentication:Google:ClientSecret": "your Google client secret"} ```
+```{  "Authentication:Google:ClientId": "your Google client ID",
+   "Authentication:Google:ClientSecret": "your Google client secret"}
+```
 
 <ol start='3'>
   <li>Open the Program.cs file and add the following code under the builder.Service.AddAuthentication method.</li>
@@ -32,5 +35,6 @@
 {
     googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
     googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
-})```
+})
+```
 
