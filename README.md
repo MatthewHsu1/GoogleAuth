@@ -7,9 +7,12 @@
   <li>Create new project.</li>
   <img src="https://github.com/MatthewHsu1/GoogleAuth/blob/master/Screenshot%202024-05-14%20070656.png" width="50%" height="50%" />
   <li>Click on OAuth consent screen.</li>
+  <img src="https://github.com/MatthewHsu1/GoogleAuth/blob/master/Screenshot%202024-05-14%20073030.png" width="50%" height="50%" />
   <li>Go through process of OAuth consent screen.</li>
   <li>Now click on Credentials.</li>
+  <img src="https://github.com/MatthewHsu1/GoogleAuth/blob/master/Screenshot%202024-05-14%20073058.png" width="50%" height="50%" />
   <li>Click on "Create Credentials" -> "Create OAuth client ID" -> obtain Client ID and Client Secret.</li>
+  <img src="https://github.com/MatthewHsu1/GoogleAuth/blob/master/Screenshot%202024-05-14%20073114.png" width="50%" height="50%" /> 
 </ol>
 
 <h2>Visual studio</h2>
