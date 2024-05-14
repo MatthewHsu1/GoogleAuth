@@ -4,10 +4,8 @@
  ![Alt text](/Screenshot 2024-05-14 070656.png)
 <ol>
   <li>Navigate to Google cloud console.</li>
-  <li>
-    Create new project.
-   <img src="https://github.com/MatthewHsu1/GoogleAuth/blob/master/Screenshot%202024-05-14%20070656.png" width="50%" height="50%" />
-  </li>
+  <li>Create new project.</li>
+  <img src="https://github.com/MatthewHsu1/GoogleAuth/blob/master/Screenshot%202024-05-14%20070656.png" width="50%" height="50%" />
   <li>Click on OAuth consent screen.</li>
   <li>Go through process of OAuth consent screen.</li>
   <li>Now click on Credentials.</li>
