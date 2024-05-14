@@ -6,7 +6,7 @@
   <li>Navigate to Google cloud console.</li>
   <li>
     Create new project.
-   
+   [[https://github.com/MatthewHsu1/GoogleAuth/blob/master/Screenshot%202024-05-14%20070656.png]]
   </li>
   <li>Click on OAuth consent screen.</li>
   <li>Go through process of OAuth consent screen.</li>
