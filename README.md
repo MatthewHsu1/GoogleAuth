@@ -1,11 +1,12 @@
 <h1>Steps taken to add google authentication</h1>
 
 <h2>Google</h2>
+ ![Alt text](Screenshot 2024-05-14 070656.png)
 <ol>
   <li>Navigate to Google cloud console.</li>
   <li>
     Create new project.
-    ![Alt text](Screenshot 2024-05-14 070656.png)
+   
   </li>
   <li>Click on OAuth consent screen.</li>
   <li>Go through process of OAuth consent screen.</li>
