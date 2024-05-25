@@ -42,3 +42,16 @@
 })
 ```
 
+<h1>Additional Steps taken to display current user.</h1>
+
+<ul>
+  <li>Update the \GoogleAuth\Data\ApplicationDbContext.cs file to include ASP.NET Core Identity and IdentityServer integration</li>
+  <li>Install necessary Nuget packages</li>
+  <li>
+    <pre><code>
+      dotnet add package Duende.IdentityServer
+      dotnet add package Microsoft.AspNetCore.ApiAuthorization.IdentityServer
+    <code><pre>
+  </li>
+</ul>
+
