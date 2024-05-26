@@ -53,5 +53,37 @@
       dotnet add package Microsoft.AspNetCore.ApiAuthorization.IdentityServer
     <code><pre>
   </li>
+  <li>
+    Configure your appsetting.json to have a connection to your database. 
+    ie.
+    <code>
+      {
+        "ConnectionStrings": {
+          "DefaultConnection": "Server=localhost\\MSSQLSERVER;Database=google_auth_db;Trusted_Connection=True;"
+        },
+        "Logging": {
+          "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+          }
+        },
+        "IdentityServer": {
+          "Clients": {
+            "GoogleAuth.Client": {
+              "Profile": "IdentityServerSPA"
+            }
+          }
+        },
+        "AllowedHosts": "*"
+      }
+    </code>
+  </li>
+  <li>
+    Installed the following Nuget package.
+    <code>
+      dotnet tool install --global dotnet-ef
+    </code>
+  </li>
+  <li>Run 'dotnet ef database update</li>
 </ul>
 
