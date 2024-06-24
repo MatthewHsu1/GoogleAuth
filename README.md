@@ -20,14 +20,15 @@
 </ol>
 
 ```
-  NuGet\Install-Package Microsoft.AspNetCore.Authentication.Google -Version 7.0.9
+NuGet\Install-Package Microsoft.AspNetCore.Authentication.Google -Version 7.0.9
 ```
 
 <ol start="2">
   <li>Right-click the project, select Manage User Secrets, and type the following code.</li>
 </ol>
 
-```{  "Authentication:Google:ClientId": "your Google client ID",
+```
+{  "Authentication:Google:ClientId": "your Google client ID",
    "Authentication:Google:ClientSecret": "your Google client secret"}
 ```
 
@@ -35,7 +36,8 @@
   <li>Open the Program.cs file and add the following code under the builder.Service.AddAuthentication method.</li>
 </ol>
 
-```.AddGoogle(googleOptions =>
+```
+.AddGoogle(googleOptions =>
 {
     googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
     googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
@@ -44,50 +46,62 @@
 
 <h1>Connecting to a local SQL Database</h1>
 
-<ul>
+<ol>
   <li>Update the \GoogleAuth\Data\ApplicationDbContext.cs file to include ASP.NET Core Identity and IdentityServer integration</li>
   <li>Install necessary Nuget packages</li>
-  <li>
-    <pre><code>
-      dotnet add package Duende.IdentityServer
-      dotnet add package Microsoft.AspNetCore.ApiAuthorization.IdentityServer
-    <code><pre>
-  </li>
-  <li>
-    Configure your appsetting.json to have a connection to your database. 
-    ie.
-    <code>
-      {
-        "ConnectionStrings": {
-           "DefaultConnection": "Server=LAPTOP-BIAV7Q4D; Database=google_auth_db; Trusted_Connection=True; Encrypt=false;"
-        },
-        "Logging": {
-          "LogLevel": {
-            "Default": "Information",
-            "Microsoft.AspNetCore": "Warning"
-          }
-        },
-        "IdentityServer": {
-          "Clients": {
-            "GoogleAuth.Client": {
-              "Profile": "IdentityServerSPA"
-            }
-          }
-        },
-        "AllowedHosts": "*"
+</ol>
+
+```
+dotnet add package Duende.IdentityServer
+dotnet add package Microsoft.AspNetCore.ApiAuthorization.IdentityServer
+```
+
+<ol>
+   <li> Configure your appsetting.json to have a connection to your database. ie. </li>
+</ol>
+
+```
+{
+  "ConnectionStrings": {
+     "DefaultConnection": "Server=LAPTOP-BIAV7Q4D; Database=google_auth_db; Trusted_Connection=True; Encrypt=false;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "IdentityServer": {
+    "Clients": {
+      "GoogleAuth.Client": {
+        "Profile": "IdentityServerSPA"
       }
-    </code>
-  </li>
-  <li>
-    Installed the following Nuget package.
-    <code>
-      dotnet tool install --global dotnet-ef
-    </code>
-  </li>
-  <li>Change directory into your project, in my case, it is</li>
-  <code>
-    cd GoogleAuth
-  </code>
-  <li>Run 'dotnet ef database update</li>
-</ul>
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+<ol>
+   <li> Installed the following Nuget package. </li>
+</ol>
+
+```
+dotnet tool install --global dotnet-ef
+```
+
+<ol>
+   <li>Change directory into your project, in my case, it is</li>
+</ol>
+
+```
+cd GoogleAuth
+```
+
+<ol>
+  <li>Execcute our dotnet ef command</li>
+</ol>
+
+```
+dotnet ef database update
+```
 
