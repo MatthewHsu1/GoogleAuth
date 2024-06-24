@@ -42,7 +42,7 @@
 })
 ```
 
-<h1>Additional Steps taken to display current user.</h1>
+<h1>Connecting to a local SQL Database</h1>
 
 <ul>
   <li>Update the \GoogleAuth\Data\ApplicationDbContext.cs file to include ASP.NET Core Identity and IdentityServer integration</li>
@@ -59,7 +59,7 @@
     <code>
       {
         "ConnectionStrings": {
-          "DefaultConnection": "Server=localhost\\MSSQLSERVER;Database=google_auth_db;Trusted_Connection=True;"
+           "DefaultConnection": "Server=LAPTOP-BIAV7Q4D; Database=google_auth_db; Trusted_Connection=True; Encrypt=false;"
         },
         "Logging": {
           "LogLevel": {
@@ -84,6 +84,10 @@
       dotnet tool install --global dotnet-ef
     </code>
   </li>
+  <li>Change directory into your project, in my case, it is</li>
+  <code>
+    cd GoogleAuth
+  </code>
   <li>Run 'dotnet ef database update</li>
 </ul>
 
