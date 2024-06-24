@@ -56,7 +56,7 @@ dotnet add package Duende.IdentityServer
 dotnet add package Microsoft.AspNetCore.ApiAuthorization.IdentityServer
 ```
 
-<ol>
+<ol start='3'>
    <li> Configure your appsetting.json to have a connection to your database. ie. </li>
 </ol>
 
@@ -81,7 +81,7 @@ dotnet add package Microsoft.AspNetCore.ApiAuthorization.IdentityServer
   "AllowedHosts": "*"
 }
 ```
-<ol>
+<ol start='4'>
    <li> Installed the following Nuget package. </li>
 </ol>
 
@@ -89,7 +89,7 @@ dotnet add package Microsoft.AspNetCore.ApiAuthorization.IdentityServer
 dotnet tool install --global dotnet-ef
 ```
 
-<ol>
+<ol start='5'>
    <li>Change directory into your project, in my case, it is</li>
 </ol>
 
@@ -97,7 +97,7 @@ dotnet tool install --global dotnet-ef
 cd GoogleAuth
 ```
 
-<ol>
+<ol start='6'>
   <li>Execcute our dotnet ef command</li>
 </ol>
 
